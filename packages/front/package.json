@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "test": "echo \"Placeholder test util\"",
     "precommit": "lint-staged && yarn test"
   },
   "dependencies": {
@@ -25,13 +26,8 @@
     "vue-template-compiler": "^2.6.11"
   },
   "lint-staged": {
-    "src/**/*.js": [
-      "yarn lint",
-      "git add"
-    ],
-    "src/**/*.vue": [
-      "yarn lint",
-      "git add"
+    "src/**/*.{js,vue}": [
+      "yarn lint"
     ]
   },
   "eslintConfig": {
