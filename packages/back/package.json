@@ -30,5 +30,11 @@
     "nodemon": "^2.0.4",
     "prettier": "^2.1.1",
     "supertest": "^4.0.2"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "yarn lint",
+      "git add"
+    ]
   }
 }

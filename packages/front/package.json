@@ -24,6 +24,16 @@
     "lint-staged": "^10.2.13",
     "vue-template-compiler": "^2.6.11"
   },
+  "lint-staged": {
+    "src/**/*.js": [
+      "yarn lint",
+      "git add"
+    ],
+    "src/**/*.vue": [
+      "yarn lint",
+      "git add"
+    ]
+  },
   "eslintConfig": {
     "root": true,
     "env": {
