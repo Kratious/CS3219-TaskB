@@ -1,0 +1,11 @@
+{
+  "name": "taskb",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/Kratious/CS3219-TaskB.git",
+  "author": "Kratious <semjinghan@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
