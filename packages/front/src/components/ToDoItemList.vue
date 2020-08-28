@@ -5,7 +5,7 @@
           <!-- TODO: convert to ToDoItem component -->
           <b-list-group-item class="p-3" v-for="task in taskList" :key="task.id">
               <div class="d-flex align-items-center">
-                  <span>{{ task.name }}</span>
+                  <p class="h5 m-0">{{ task.name }}</p>
                   <div class="ml-auto">
                     <b-button title="Edit" variant="link" class="mr-1" @click="edit" >
                       <b-icon-pencil variant="primary" />

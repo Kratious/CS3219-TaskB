@@ -1,22 +1,20 @@
 <template>
   <div id="app">
     <div class="container-sm">
-    <!-- <HelloWorld msg="Hello World!" /> -->
-    <ToDoInput />
-    <ToDoItemList class="mt-4" :taskList="taskList" />
+      <h1 class="display-3">To-do list</h1>
+      <ToDoInput class="mt-4" />
+      <ToDoItemList class="mt-4" :taskList="taskList" />
     </div>
   </div>
 </template>
 
 <script>
-// import HelloWorld from '@/components/HelloWorld';
 import ToDoInput from '@/components/ToDoInput';
 import ToDoItemList from '@/components/ToDoItemList';
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld,
     ToDoInput,
     ToDoItemList,
   },
