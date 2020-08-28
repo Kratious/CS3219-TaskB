@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test": "echo \"Placeholder test util\"",
+    "precommit": "lint-staged && yarn test"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -20,7 +22,13 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "2.21.2",
     "eslint-plugin-vue": "^6.2.2",
+    "lint-staged": "^10.2.13",
     "vue-template-compiler": "^2.6.11"
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "yarn lint"
+    ]
   },
   "eslintConfig": {
     "root": true,

@@ -6,6 +6,13 @@
   "author": "Kratious <semjinghan@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "husky": "^4.2.5",
     "lerna": "^3.22.1"
-  }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lerna run precommit --concurrency 1 --stream "
+    }
+  },
+  "dependencies": {}
 }
