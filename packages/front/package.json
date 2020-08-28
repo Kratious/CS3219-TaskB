@@ -46,7 +46,9 @@
     "plugins": [
       "vue"
     ],
-    "rules": {}
+    "rules": {
+        "linebreak-style": ["error", "windows"]
+    }
   },
   "browserslist": [
     "> 1%",

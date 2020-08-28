@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "name": "Frontend",
+      "path": "packages/front"
+    },
+    {
+      "name": "Backend",
+      "path": "packages/back"
+    },
+    {
+      "name": "Global",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": false,
+    "search.exclude": {
+      "**/node_modules": true
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  }
+}
