@@ -1,29 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Hello World!" />
-    {{ info }}
+    <div class="container-sm">
+    <!-- <HelloWorld msg="Hello World!" /> -->
+    <ToDoInput />
+    <ToDoItemList class="mt-4" :taskList="taskList" />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld';
+// import HelloWorld from '@/components/HelloWorld';
+import ToDoInput from '@/components/ToDoInput';
+import ToDoItemList from '@/components/ToDoItemList';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    // HelloWorld,
+    ToDoInput,
+    ToDoItemList,
   },
   data() {
     return {
-      info: null,
+      taskList: [],
     };
   },
   mounted() {
     this.$http
       .get('/')
       .then((response) => {
-        this.info = response.data;
+        this.taskList = response.data;
+        console.log(this.taskList[0]);
       })
       .catch((error) => {
         console.log(error);
@@ -37,8 +44,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
 }
 </style>
