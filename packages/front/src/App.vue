@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 import HelloWorld from '@/components/HelloWorld';
 
 export default {
@@ -21,9 +20,8 @@ export default {
     };
   },
   mounted() {
-    console.log(process.env.BASE_URL);
-    axios
-      .get('http://localhost:5000/')
+    this.$http
+      .get('/')
       .then((response) => {
         this.info = response.data;
       })
