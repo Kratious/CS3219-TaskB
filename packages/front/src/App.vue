@@ -8,7 +8,7 @@
 
 <script>
 import axios from 'axios';
-import HelloWorld from '@/components/HelloWorld.vue';
+import HelloWorld from '@/components/HelloWorld';
 
 export default {
   name: 'App',
@@ -22,11 +22,14 @@ export default {
   },
   mounted() {
     console.log(process.env.BASE_URL);
-    axios.get('http://localhost:5000/')
+    axios
+      .get('http://localhost:5000/')
       .then((response) => {
         this.info = response.data;
       })
-      .catch((error) => { console.log(error); });
+      .catch((error) => {
+        console.log(error);
+      });
   },
 };
 </script>
