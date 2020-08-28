@@ -2,16 +2,32 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Hello World!" />
+    {{ info }}
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from '@/components/HelloWorld';
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
+  },
+  data() {
+    return {
+      info: null,
+    };
+  },
+  mounted() {
+    this.$http
+      .get('/')
+      .then((response) => {
+        this.info = response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
 };
 </script>
