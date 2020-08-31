@@ -33,11 +33,6 @@ export default {
       required: true,
     },
   },
-  watch: {
-    taskList(n, o) {
-      console.log(n, o); // n is the new value, o is the old value.
-    },
-  },
   methods: {
     edit() {
       alert('test');
