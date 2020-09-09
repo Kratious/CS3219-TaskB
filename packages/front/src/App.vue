@@ -33,7 +33,6 @@ export default {
         .get('/')
         .then((response) => {
           this.taskList = response.data;
-          console.log(this.taskList[0]);
         })
         .catch((error) => {
           console.log(error);
@@ -49,7 +48,6 @@ export default {
       });
     },
     complete(taskId, updateComplete) {
-      console.log(`${taskId} ${updateComplete}`);
       this.$http.put('/complete', { id: taskId, completed: updateComplete }).then((res) => {
         if (res.data.statusCode === 204) {
           this.retrieve();
