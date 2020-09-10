@@ -28,6 +28,7 @@
                 class="edit-input"
                 type="text"
                 v-model="task.name"
+                v-todo-focus="todo == editedTodo"
                 size="lg"
                 @blur="doneEdit(task)"
                 @keyup.enter="doneEdit(task)"
@@ -80,6 +81,13 @@ export default {
 
     cancelEdit() {
       this.editedTask = null;
+    },
+  },
+  directives: {
+    'todo-focus': (el, binding) => {
+      if (binding.value) {
+        el.focus();
+      }
     },
   },
 };
