@@ -5,6 +5,10 @@
   "repository": "https://github.com/Kratious/CS3219-TaskB.git",
   "author": "Kratious <semjinghan@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "lint": "lerna run lint --stream",
+    "start": "lerna run start --stream"
+  },
   "devDependencies": {
     "husky": "^4.2.5",
     "lerna": "^3.22.1"

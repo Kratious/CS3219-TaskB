@@ -1,4 +1,4 @@
-// temporary
+// TODO: add prettier to eslintrc
 module.exports = {
     trailingComma: 'es5',
     tabWidth: 2,
