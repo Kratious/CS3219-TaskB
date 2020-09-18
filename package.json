@@ -2,6 +2,7 @@
   "name": "taskb",
   "version": "0.0.1",
   "main": "index.js",
+  "private": true,
   "repository": "https://github.com/Kratious/CS3219-TaskB.git",
   "author": "Kratious <semjinghan@gmail.com>",
   "license": "MIT",
@@ -9,8 +10,12 @@
     "lint": "lerna run lint --stream",
     "start": "lerna run start --stream",
     "test": "lerna run test --stream",
-    "build": "lerna run build --stream"
+    "build": "lerna run build --stream",
+    "bootstrap": "lerna bootstrap --use-workspaces"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "husky": "^4.2.5",
     "lerna": "^3.22.1"
