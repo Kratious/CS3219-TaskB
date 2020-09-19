@@ -20,7 +20,8 @@
     "express": "^4.17.1",
     "knex": "^0.21.5",
     "objection": "^2.2.3",
-    "pg": "^8.3.3"
+    "pg": "^8.3.3",
+    "serverless-http": "^2.6.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -35,6 +36,7 @@
     "lint-staged": "^10.2.13",
     "nodemon": "^2.0.4",
     "prettier": "^2.1.1",
+    "serverless-babel-plugin": "^0.2.0",
     "supertest": "^4.0.2"
   },
   "lint-staged": {
