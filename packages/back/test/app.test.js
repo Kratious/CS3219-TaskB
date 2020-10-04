@@ -1,7 +1,12 @@
-import request from 'supertest';
-import app from '../src/app';
-import knex from '../src/db/knex';
-import Todo from '../src/models/Todo';
+// import request from 'supertest';
+// import app from '../src/app';
+// import knex from '../src/db/knex';
+// import Todo from '../src/models/Todo';
+
+const request = require('supertest');
+const app = require('../src/app');
+const knex = require('../src/db/knex');
+const Todo = require('../src/models/Todo');
 
 describe('app', () => {
   beforeAll(() => knex.migrate.latest());

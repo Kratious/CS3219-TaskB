@@ -13,9 +13,6 @@
     "build": "lerna run build --stream",
     "bootstrap": "lerna bootstrap --use-workspaces"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "husky": "^4.2.5",
     "lerna": "^3.22.1"

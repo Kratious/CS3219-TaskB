@@ -1,8 +1,14 @@
-import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
+// import express from 'express';
+// import cors from 'cors';
+// import bodyParser from 'body-parser';
 
-import Todo from './models/Todo';
+// import Todo from './models/Todo';
+
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+
+const Todo = require('./models/Todo');
 
 const app = express();
 app.use(cors()); // TODO: temporarily enable for all

@@ -1,5 +1,8 @@
-import serverless from "serverless-http"
-import app from './app';
+// import serverless from 'serverless-http';
+// import app from './app';
+
+const serverless = require('serverless-http');
+const app = require('./app');
 
 /* const port = process.env.PORT || 5000;
 

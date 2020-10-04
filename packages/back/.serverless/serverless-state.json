@@ -159,7 +159,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/express-api/prod/1600494243206-2020-09-19T05:44:03.206Z/express-api.zip"
+                "S3Key": "serverless/express-api/prod/1600807903838-2020-09-22T20:51:43.838Z/express-api.zip"
               },
               "FunctionName": "express-api-prod-api",
               "Handler": "src/index.handler",
@@ -177,14 +177,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionMMqYIQ5NLJHyQAhQ0Uv4Slxi3NOOAK22tdEUoidsFs": {
+          "ApiLambdaVersionS6i7Eu135F2mJRIHsGMh7r3W73cfyYrfsT3CzyOx79Q": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "udpbY+wPRN9iVWneO9jEq6jJhLaM4JLGbG2xzFlD/F0="
+              "CodeSha256": "I+KhjsEW4Gk3K5W2XjohXigvT1BmU+DcKrCwrFCLxSA="
             }
           },
           "ApiGatewayRestApi": {
@@ -396,7 +396,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1600494241593": {
+          "ApiGatewayDeployment1600807892960": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -458,7 +458,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionMMqYIQ5NLJHyQAhQ0Uv4Slxi3NOOAK22tdEUoidsFs"
+              "Ref": "ApiLambdaVersionS6i7Eu135F2mJRIHsGMh7r3W73cfyYrfsT3CzyOx79Q"
             }
           },
           "ServiceEndpoint": {
@@ -619,7 +619,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionMMqYIQ5NLJHyQAhQ0Uv4Slxi3NOOAK22tdEUoidsFs"
+        "versionLogicalId": "ApiLambdaVersionS6i7Eu135F2mJRIHsGMh7r3W73cfyYrfsT3CzyOx79Q"
       }
     },
     "configValidationMode": "warn",
@@ -641,7 +641,7 @@
     "artifact": "C:\\Users\\semji\\Desktop\\CS3219\\OTOT\\TaskB\\packages\\back\\.serverless\\express-api.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/express-api/prod/1600494243206-2020-09-19T05:44:03.206Z",
+    "artifactDirectoryName": "serverless/express-api/prod/1600807903838-2020-09-22T20:51:43.838Z",
     "artifact": "express-api.zip"
   }
 }
