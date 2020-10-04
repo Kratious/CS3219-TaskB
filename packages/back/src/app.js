@@ -13,14 +13,18 @@ app.get('/', (req, res) => Todo.query().orderBy('id', 'asc').then((todos) => {
   res.json(todos);
 }));
 
-app.post('/', (req, res) => Todo.query().insert({
-  name: req.body.name,
-}).then(() => res.json({ statusCode: 204 })).catch((error) => {
-  console.log(error);
-  return res.json({ statusCode: 400 });
-}));
+app.post('/', (req, res) => {
+  console.log(req.body);
+  Todo.query().insert({
+    name: req.body.name,
+  }).then(() => res.json({ statusCode: 204 })).catch((error) => {
+    console.log(error);
+    return res.json({ statusCode: 400 });
+  });
+});
 
 app.put('/', (req, res) => {
+  console.log(req.body);
   Todo.query().findById(req.body.id).patch({
     name: req.body.name,
   }).then(() => res.json({ statusCode: 204 }))

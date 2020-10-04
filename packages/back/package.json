@@ -8,7 +8,8 @@
     "start": "nodemon --exec babel-node -r dotenv/config src/index.js",
     "test": "cross-env NODE_ENV=test jest",
     "lint": "npx eslint --fix *.js src test *.js",
-    "precommit": "lint-staged && yarn test"
+    "precommit": "lint-staged && yarn test",
+    "heroku-postbuild": "yarn build"
   },
   "keywords": [],
   "author": "",
