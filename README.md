@@ -10,6 +10,14 @@ $ yarn install
 $ yarn start
 ```
 
+To initialise database, either create a postgres instance that complies with the default connection string in `packages/back/src/knexfile.js` or edit the default connection string to comply with your preferred postgres instance.
+
+Next, run this command to migrate to latest schema:
+`knex migrate:latest`
+
+To seed the database, you can run:
+`knex seed:run`
+
 Access the backend endpoints at localhost:5000
 
 ## Heroku Monorepo Backend Configuration
